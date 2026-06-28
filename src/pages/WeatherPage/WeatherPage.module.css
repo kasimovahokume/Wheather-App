@@ -1,34 +1,51 @@
 .page {
   min-height: 100vh;
-  padding: var(--spacing-xl);
+  padding: 32px 24px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.container {
+.wrapper {
   width: 100%;
-  max-width: 1000px;
-  display: flex;
-  gap: var(--spacing-lg);
-}
-
-.leftPanel {
-  flex: 1;
+  max-width: 480px;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);  
+  gap: 24px;
 }
 
-.rightPanel {
-  flex: 2;
+.header {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  align-items: center;
+  gap: 16px;
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
+.appTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  text-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.3),
+    0 4px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cardWrapper {
+  width: 100%;
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
